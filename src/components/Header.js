@@ -1,9 +1,10 @@
 import React from 'react'
 import logo from '../../src/img/icons_assets/Logo.png'
+import Nav from './Nav'
 
 const Header = () => {
   return (
-    <div>
+    <div className='logo'>
       <img src={logo}/>
     </div>
   )

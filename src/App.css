@@ -1,38 +1,197 @@
-.App {
+/*Firstly, I created universal selectors to make my code more organized and to use what will be most useful to me, such as a color palette and some pre-defined formats.*/
+
+:root {
+  --navhead: #5D561B;
+  --greyhero: #AAAAAA;
+  --between: #C7B300;
+  --greyreserv: #5A5C5A;
+  --footer: #000000;
+  --white: #FFFFFF;
+  --goldlight: #e8f885ea;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*, *:before, *::after {
+  box-sizing: inherit;
+}
+body{
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+}
+
+/*First of all, starting with the header, where the logo is included in a way that emphasizes the mobile-first approach initially, and then, as the screen size increases, it is hidden to display a different layout and make it responsive.*/
+
+
+.title {
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Fasthand', cursive;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+@media (min-width: 780px){
+  .header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      
+  }
+}
+
+.logo img{
+  height: 8rem;
+  max-width: 30rem;
+  
+}
+@media (min-width: 780px){
+  .logo img{
+    margin-left: 2rem;
+    height: 5rem;
+  }
+}
+
+/*Then, I started working with the navigation bar, assigning different classes to it in order to manipulate both parent and child elements independently.*/
+
+.container{
+  max-width: 120rem;
+}
+
+.nav-bg{
+  align-items: center;
+}
+
+@media (min-width : 780px){
+  .nav-bg{
+    background-color: var(--white);
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.nav-principal {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  background-color: #AAAAAA;
+}
+
+@media (min-width : 780px) {
+  .nav-principal{
+      background-color: #FFFFFF;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-right: 6rem;
+  }
+}
+
+.nav-principal a{
+  color: var(--white);
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Karla', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+@media (min-width : 780px){
+  .nav-principal a{
+    color: #000000;
+    font-style: normal;
+    padding: 1rem;
+  }
+}
+.nav-principal a:hover{
+  background-color: var(--goldlight);
+  color: var(--navhead);
+}
+
+.hero{
+  display: flex;
+  justify-content: center;
+  height: 340px;
+  background: #495E57;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  position: inherit;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cardHero{
   display: flex;
   flex-direction: column;
+  text-align: start;
+  height: 34rem;
+  width: 40rem;
+}
+
+
+
+.part1{
+  max-width: 50%;
+  padding: 0 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.part1 h1{
+  color: #F4CE14;
+  font-family: markazi;
+  font-size: 5rem;
+  margin-bottom: -3rem;
+}
+
+.part1 h3{
+  color: #EDEFEE;
+  font-size: 3rem;
+  margin-bottom: -1rem;
+}
+
+.part1 p{
+  width: 20rem;
+  color: #EDEFEE;
+  margin-bottom: 3rem;
+
+}
+
+.part1 input{
+  height: 5rem;
+  width: 25rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.25);
+  background-color: #F4CE14;
+  font-weight: 700;
+}
+
+.part1 input:hover{
+  cursor: pointer;
+}
+
+.part2{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 50%;
+  font-family: markazi;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.card{
+  margin-top: 3rem;
+  height: 37rem;
+  width: 30rem;
+  border-radius: 10px;
+  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.25);
 }
