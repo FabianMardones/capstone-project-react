@@ -1,5 +1,7 @@
 import React from 'react'
 import imgHero from '../../src/img/icons_assets/restauranfood.jpg'
+import Specials from './Specials'
+import Section from './Section'
 
 const Main = () => {
   return (
@@ -17,6 +19,8 @@ const Main = () => {
           <img className='card' src={imgHero}/>
         </div>
       </div>
+      <Specials/>
+      <Section/>
     </div>
   )
 }

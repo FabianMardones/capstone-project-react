@@ -121,20 +121,35 @@ body{
 .hero{
   display: flex;
   justify-content: center;
+  height: 400px;
+  background: #495E57;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+@media (min-width : 780px){
+  .hero{
   height: 340px;
   background: #495E57;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   position: inherit;
   text-align: center;
+  }
 }
-
 
 .cardHero{
   display: flex;
   flex-direction: column;
   text-align: start;
   height: 34rem;
-  width: 40rem;
+  width: 28rem;
+}
+
+@media (min-width: 780px) {
+  .cardHero{
+    height: 34rem;
+    width: 40rem;
+  }
 }
 
 
@@ -149,34 +164,70 @@ body{
 .part1 h1{
   color: #F4CE14;
   font-family: markazi;
-  font-size: 5rem;
-  margin-bottom: -3rem;
+  font-size: 3.5rem;
+  margin-top: 5rem;
+  margin-bottom: -2rem;
 }
 
+@media (min-width : 780px){
+
+  .part1 h1{
+    color: #F4CE14;
+    font-size: 5rem;
+    margin-bottom: -3rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 780px) {
+  .part1 h3 {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+}
 .part1 h3{
-  color: #EDEFEE;
-  font-size: 3rem;
-  margin-bottom: -1rem;
+  
 }
 
 .part1 p{
   width: 20rem;
   color: #EDEFEE;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 
 }
 
-.part1 input{
-  height: 5rem;
-  width: 25rem;
+
+@media (min-width: 780px) {
+  .part1 p{
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+  }
+}
+.btn1{
+  height: 6rem;
+  width: 20rem;
   border-radius: 10px;
   box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.25);
   background-color: #F4CE14;
   font-weight: 700;
 }
 
-.part1 input:hover{
+.btn1:hover{
   cursor: pointer;
+}
+
+@media (min-width: 500px) {
+  .btn1{
+  height: 6rem;
+  width: 22rem;
+  }
+}
+
+@media (min-width: 780px) {
+  .btn1{
+  height: 6rem;
+  width: 25rem;
+  }
 }
 
 .part2{
@@ -189,9 +240,319 @@ body{
 
 
 .card{
-  margin-top: 3rem;
-  height: 37rem;
-  width: 30rem;
+  height: 30rem;
+  width: 22rem;
+  margin-top: 5rem;
   border-radius: 10px;
   box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width : 780px){
+  .card{
+    margin-top: 4rem;
+    margin-left: 4.5rem;
+    height: 37rem;
+   width: 30rem;
+  }
+}
+
+
+/*---------------------------------------------*/
+
+.specialSection {
+  height: 165rem;
+}
+
+@media (min-width:780px) {
+  .specialSection{
+    height: 70rem;
+  }
+}
+
+
+.titleBtn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 185px;
+  align-items: center;
+  font-family: markazi;
+  font-size: 2.1rem;
+}
+
+@media (min-width: 780px) {
+  .titleBtn{
+    flex-direction: row;
+    justify-content: center;
+    margin: 3rem 9rem;
+  }
+}
+
+@media (min-width: 780px) {
+  .btn2{
+    margin-left: 22rem;
+    position: inherit;
+  }
+}
+
+@media (min-width: 900px) {
+  .btn2{
+    margin-left: 22rem;
+    position: inherit;
+  }
+}
+
+
+.cardSpecial{
+  height: 450px;
+  width: 300px;
+  background-color:#EDEBEB;
+  margin: 2rem auto;
+  border-radius: 10px 10px 0 0 ;
+}
+
+@media (min-width:780px) {
+  .cardSpecial{
+    width: 227px;
+    height: 477px;
+  }
+}
+
+
+
+.cardSpecialImg{
+  height: 189px;
+  width: 300px;
+  background-color:#EDEBEB;
+  margin-left: 0rem;
+  border-radius: 10px 10px 0 0 ;
+}
+@media (min-width:780px) {
+  .cardSpecialImg{
+    width: 227px;
+  }
+}
+
+
+.dishName{
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem 2rem;
+}
+
+.price{
+  color:#F88554;
+}
+
+.cardSpecial p{
+  margin: 1rem 2rem;
+  color:#495E57;
+}
+
+.orderADelivery{
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem 2rem;
+}
+
+
+@media (min-width: 780px) {
+  .CardsPromotion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 34rem;
+    margin-top: -9rem;
+  }
+}
+@media (min-width: 1500px) {
+  .CardsPromotion{
+    padding: 0rem 36rem;
+    margin-top: -9rem;
+  }
+}
+
+
+.hero2{
+  height: 600px;
+  background-color: #F4F4F4;
+}
+
+.hero2 p{
+  color: #000000;
+  font-weight: 700;
+}
+
+.cardHero2{
+  margin-top: 10rem;
+}
+
+.part2section{
+  margin-top: 5rem;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+/* .uno{
+  display: flex;
+  flex-direction: column;
+}
+
+.dos{
+  display: flex;
+  flex-direction: column;
+}
+
+.tres{
+  display: flex;
+  flex-direction: column;
+} */
+
+footer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  background-color: var(--footer);
+}
+.nav-footer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items:flex-start;
+  margin-right: 5rem;
+  height: 20rem;
+  width: 20rem;
+
+}
+.nav-footer a{
+  margin: 2rem;
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 900;
+}
+
+.newsletter{
+  text-align: center;
+  color: var(--white);
+}
+
+.form-footer{
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+}
+
+.form-footer label{
+  margin: 0.5rem;
+  font-weight: 700;
+}
+
+.form-footer input{
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 25rem;
+}
+
+.logo-footer{
+  -webkit-filter: invert(1) hue-rotate(180deg) contrast(2);
+filter: invert(1) hue-rotate(180deg) contrast(1);
+}
+
+.copy-right{
+  color: var(--white);
+}
+.social-media{
+  height: 10rem;
+}
+.social-media svg{
+  height: 3rem;
+  margin: 2rem;
+}
+.copy-right2{
+  display: none;
+}
+.active{
+  display: flex;
+}
+
+@media (min-width : 920px){
+  footer{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 40rem;
+  }
+  .copy-right{
+      display: none;
+  }
+  .copy-right2{
+      display: flex;
+      margin-left: 7rem;
+  }
+  .nav-footer{
+      margin-right: 17rem;
+  }
+  .newsletter{
+      margin-right: 10rem;
+  }
+
+}
+
+@media (min-width : 1140px) {
+  footer{
+      height: 24rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      flex-direction: column;
+  }
+  .form-footer { 
+      align-items: center;
+  }
+  .form-footer input{
+      border-radius: 1rem;
+      height: 4rem;
+  }
+  
+  .logo{
+    height: 10rem;
+  }
+
+  .form-footer .last-button{
+      padding: 0.9rem;
+      margin-left: 0.8rem;
+      border-radius: 1rem;
+  }
+  .last-button:hover{
+      background-color: var(--between);
+      color: var(--navhead);
+      font-weight: 900;
+  }
+  .copy-right{
+      display: none;
+  }
+  .copy-right2{
+      display: flex;
+      margin-left: 7rem;
+      margin-top: 5rem;
+  }
+  .social-media{
+      margin-left: -5rem;
+  }
+  .active{
+      display: flex;
+      margin-top: 0.5rem;
+      margin-left: -10rem;
+  }
+  .nav-footer{
+      margin-right: 2rem;
+  }
+  .newsletter{
+      margin-right: 2rem;
+  }
 }
