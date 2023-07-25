@@ -618,3 +618,53 @@ footer {
       margin-right: 2rem;
   }
 }
+
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 105rem;
+  padding: 2rem;
+}
+
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  height: 70rem;
+  width: 60rem;
+  background-color: #b4a693;
+  border-radius: 10px;
+}
+
+.labelForm{
+  margin-top: 3rem;
+  margin-left: 10%;
+  width: 80%;
+  color: #FFFFFF;
+  font-weight: 700;
+
+}
+
+.inputForm{
+  margin-top: 0.5vh;
+  margin-left: 10%;
+  width: 80%;
+  height: 6%;
+  border-radius: 5px;
+  border-width: none;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputDate{
+  width: 35%;
+  height: 35%;
+}
+
+.dayAndHour{
+  display: flex;
+  height: 20%;
+}

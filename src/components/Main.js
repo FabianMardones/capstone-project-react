@@ -4,12 +4,14 @@ import Specials from './Specials'
 import Section from './Section'
 import CardDishes from './CardDishes'
 import HeroHome from './HeroHome'
+import Formulario from './Formulario'
 
 const Main = () => {
   return (
     <div>
       <HeroHome/>
-      <Specials/>
+      <Formulario/>
+      {/* <Specials/> */}
       <Section/>
     </div>
   )
