@@ -4,6 +4,7 @@ import bici from '../../src/img/icons_assets/directions_bike_FILL0_wght400_GRAD0
 
 const CardDishes = () => {
   return (
+    <div className='cardOptions'>
     <div className='cardSpecial'>
         <img className='cardSpecialImg' src={greekSalad}/>
             <div className='dishName'>
@@ -15,7 +16,7 @@ const CardDishes = () => {
                 <h4>Order a delivery</h4>
             <img src={bici}/>
         </div>
-            
+    </div>
     </div>
   )
 }
