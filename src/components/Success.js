@@ -49,7 +49,7 @@ const Success = () => {
                 <h3>People: {''}
                     <span>2</span></h3>
             </div>
-            <h2>Your reservation information was sent to your email</h2>
+            <h2 className='finalMessage'>Your reservation information was sent to your email</h2>
             <input type='Submit' 
                   className='btnMessage btnForm' 
                   value='Finish'

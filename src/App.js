@@ -10,7 +10,7 @@ import { useState } from 'react';
 
 
 function App() {
-  const [ cliente, setCliente ] = useState([])
+  const [ customer, setCustomer ] = useState([])
   return (
     <>
     <div className="App">
@@ -21,8 +21,8 @@ function App() {
       {/* <Main/> */}
       <Hero2/>
       <Formulario
-      cliente={cliente}
-      setCliente={setCliente}/>
+      customer={customer}
+      setCustomer={setCustomer}/>
       {/* <Success/> */}
       <Footer/>
     </div>

@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
+import Error from './Error'
 
-const Formulario = ({cliente, setCliente}) => {
+const Formulario = ({customer, setCustomer}) => {
   const [ name, setName ] = useState('')
   const [ email, setEmail ] = useState('')
   const [ phone, setPhone ] = useState('')
@@ -22,7 +23,7 @@ const Formulario = ({cliente, setCliente}) => {
       setError(false)
 
 
-      const objCliente = {
+      const objCustomer = {
         name,
         email,
         phone,
@@ -33,7 +34,7 @@ const Formulario = ({cliente, setCliente}) => {
         side
       }
 
-      setCliente([...cliente, objCliente])
+      setCustomer([...customer, objCustomer])
 
       setName('')
       setEmail('')
@@ -53,6 +54,9 @@ const Formulario = ({cliente, setCliente}) => {
     </div>
     <form className='form' onSubmit={handleSubmit}>
       <div className='formContainer'>
+
+      {error && <Error>all fields are required</Error>}
+
             <label htmlFor='name' 
                   className='labelForm'>Full Name</label>
             <input id="name" 
