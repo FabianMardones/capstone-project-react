@@ -203,7 +203,7 @@ body{
 .part1 p{
   width: 20rem;
   color: #EDEFEE;
-  margin-bottom: 5rem;
+  margin-bottom: 0rem;
 
 }
 
@@ -214,23 +214,30 @@ body{
     margin-bottom: 3rem;
   }
 }
+
+
 .btn1{
+  padding: 2rem;
   height: 6rem;
   width: 20rem;
   border-radius: 10px;
   box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.25);
   background-color: #F4CE14;
   font-weight: 700;
+  border: #F4CE14;
 }
 
 .btn1:hover{
   cursor: pointer;
+  background-color: #b99c0b;
+  color: white;
 }
 
 @media (min-width: 500px) {
   .btn1{
   height: 6rem;
   width: 22rem;
+  padding: 0rem;
   }
 }
 
@@ -623,7 +630,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 105rem;
+  height: 85rem;
   padding: 2rem;
 }
 
@@ -632,7 +639,7 @@ footer {
   flex-direction: column;
   height: 70rem;
   width: 60rem;
-  background-color: #b4a693;
+  background-color: #cbdad1;
   border-radius: 10px;
 }
 
@@ -640,7 +647,7 @@ footer {
   margin-top: 3rem;
   margin-left: 10%;
   width: 80%;
-  color: #FFFFFF;
+  color: #000000;
   font-weight: 700;
 
 }
@@ -649,9 +656,10 @@ footer {
   margin-top: 0.5vh;
   margin-left: 10%;
   width: 80%;
-  height: 6%;
+  height: 10%;
   border-radius: 5px;
   border-width: none;
+  border:#EDEFEE;
 }
 
 .date {
@@ -661,10 +669,153 @@ footer {
 
 .inputDate{
   width: 35%;
-  height: 35%;
+  height: 32%;
+}
+
+.inputHour:hover{
+  cursor: pointer;
 }
 
 .dayAndHour{
   display: flex;
-  height: 20%;
+  height: 35%;
 }
+
+.finalForm{
+  display: flex;
+  margin-top: -14%;
+}
+
+.inputFinalForm{
+  margin-top:1%;
+  display: flex;
+  height: 30%;
+  justify-content: center;
+}
+
+.labelSide{
+  margin-right: 10%;
+}
+
+
+.inputSide{
+  width: 35%;
+  height: 35%;
+  margin-left: 10%;
+  border-radius: 5px;
+  border-color: rgb(59, 132, 82);
+  border:#EDEFEE;
+}
+
+.inputSide:hover{
+  cursor: pointer;
+}
+
+.inputMany{
+  border-radius: 5px;
+  border:#EDEFEE;
+  width: 35%;
+  height: 35%;
+}
+
+.btnForm{
+  margin-bottom: 5rem;
+  padding: 1rem;
+  width: 80%;
+  margin-left: 10%;
+  height: 7%;
+  border-radius: 5px;
+  background-color: #F4CE14;
+  color: #495E57;
+  font-weight: 700;
+}
+@media (min-width: 780px) {
+  .btnForm{
+    height: 7rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.hero3{
+  justify-content: center;
+  background-color: #495E57;
+  height: 17rem;
+
+}
+
+@media (min-width: 780px) {
+  .hero3 .part1{
+    margin-right: 45rem;
+  }
+}
+
+.formName{
+  text-align: center;
+  height: 1rem;
+}
+
+.formName h2{
+  margin-top: 5rem;
+  margin-bottom: -5rem;
+  font-size: 40px;
+  font-family: markazi;
+}
+
+@media (min-width: 780px) {
+  .formName > h2{
+    font-size: 55px;
+  }
+}
+
+.check{
+  margin:5rem auto;
+}
+
+.check img{
+  height: 15rem;
+}
+
+@media (min-width: 780px) {
+  .check{
+    margin:8rem auto;
+  }
+}
+
+@media (min-width:780px) {
+  .check img{
+    height: 20rem;
+  }
+}
+
+.message{
+  height: 60rem;
+}
+
+.message h2{
+  margin: 3rem 3rem;
+  text-align: center;
+
+}
+
+.detail{
+  display: flex;
+  justify-content: start;
+  margin-top:-2rem;
+  margin-left: 10%;
+}
+
+.btnForm{
+  padding-bottom: 2rem;
+  width: 50%;
+  margin-left: 25%;
+}
+
+@media (min-width:780px) {
+  .btnform{
+    padding-bottom: 1rem;
+  }
+}
+
+
+

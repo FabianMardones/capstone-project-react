@@ -5,13 +5,14 @@ import Section from './Section'
 import CardDishes from './CardDishes'
 import HeroHome from './HeroHome'
 import Formulario from './Formulario'
+import Hero2 from './Hero2'
+import Success from './Success'
 
 const Main = () => {
   return (
     <div>
       <HeroHome/>
-      <Formulario/>
-      {/* <Specials/> */}
+      <Specials/>
       <Section/>
     </div>
   )
