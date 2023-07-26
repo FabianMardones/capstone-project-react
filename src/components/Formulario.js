@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Formulario = () => {
+const Formulario = ({cliente, setCliente}) => {
   const [ name, setName ] = useState('')
   const [ email, setEmail ] = useState('')
   const [ phone, setPhone ] = useState('')
@@ -20,6 +20,29 @@ const Formulario = () => {
           return;
       }
       setError(false)
+
+
+      const objCliente = {
+        name,
+        email,
+        phone,
+        occasion,
+        day,
+        hour,
+        people,
+        side
+      }
+
+      setCliente([...cliente, objCliente])
+
+      setName('')
+      setEmail('')
+      setPhone('')
+      setOccasion('')
+      setDay('')
+      setHour('')
+      setPeople('')
+      setSide('')
 
   }
 

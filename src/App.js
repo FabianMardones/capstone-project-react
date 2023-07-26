@@ -6,9 +6,11 @@ import Hero2 from './components/Hero2';
 import Main from './components/Main';
 import Nav from './components/Nav';
 import Success from './components/Success';
+import { useState } from 'react';
 
 
 function App() {
+  const [ cliente, setCliente ] = useState([])
   return (
     <>
     <div className="App">
@@ -18,7 +20,9 @@ function App() {
       </div>
       {/* <Main/> */}
       <Hero2/>
-      <Formulario/>
+      <Formulario
+      cliente={cliente}
+      setCliente={setCliente}/>
       {/* <Success/> */}
       <Footer/>
     </div>
