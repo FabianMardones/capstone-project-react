@@ -1,12 +1,34 @@
 import React from 'react'
+import { useState } from 'react'
 
 const Formulario = () => {
+  const [ name, setName ] = useState('')
+  const [ email, setEmail ] = useState('')
+  const [ phone, setPhone ] = useState('')
+  const [ occasion, setOccasion ] = useState('')
+  const [ day, setDay ] = useState('')
+  const [ hour, setHour ] = useState('')
+  const [ people, setPeople ] = useState('')
+  const [ side, setSide] = useState('')
+  const [ error, setError ] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+      if([name, email, phone, occasion, day, hour, people, side].includes('')){
+          setError(true)
+          return;
+      }
+      setError(false)
+
+  }
+
   return (
     <>
-    <div  className='formName'>
+    <div className='formName'>
       <h2>Schedule your reservation</h2>
     </div>
-    <form className='form'>
+    <form className='form' onSubmit={handleSubmit}>
       <div className='formContainer'>
             <label htmlFor='name' 
                   className='labelForm'>Full Name</label>
@@ -14,6 +36,8 @@ const Formulario = () => {
                   type="text" 
                   placeholder="Full Name" 
                   className='inputForm'
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   />
 
             <label htmlFor='Email' 
@@ -22,6 +46,8 @@ const Formulario = () => {
                   type="text" 
                   placeholder="Email" 
                   className='inputForm'
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   />
 
             <label htmlFor='phone' 
@@ -30,13 +56,15 @@ const Formulario = () => {
                   type="text" 
                   placeholder="Cellphone" 
                   className='inputForm'
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   />
 
             <label htmlFor='occasion' 
                   className='labelForm labelDate'>Special Occasion?</label>
             <select className='inputForm' 
-                    id="occasion">Hour
-                <option value='none'>Please select an option</option>
+                    id="occasion" value={occasion} onChange={(e) => setOccasion(e.target.value)}>Hour 
+                <option value=''>Please select an option</option>
                 <option value='Engagement'>Engagement</option>
                 <option value='Celebration'>Celebration</option>
                 <option value='Bithday'>Bithday</option>
@@ -49,9 +77,12 @@ const Formulario = () => {
                 <input id="date" 
                       type="date" 
                       className='inputForm inputDate'
+                      value={day}
+                      onChange={(e) => setDay(e.target.value)}
                       />
 
-                <select className='inputHour inputForm inputDate' id="date">
+                <select className='inputHour inputForm inputDate' id="hour"
+                        value={hour} onChange={(e) => setHour(e.target.value)}>
                 <option value=''>Please select an Hour</option>
                 <option value='13:00'>13:00</option>
                 <option value='14:00'>14:00</option>
@@ -75,12 +106,15 @@ const Formulario = () => {
                     type="text" 
                     placeholder="Many people" 
                     className='inputMany'
+                    value={people}
+                    onChange={(e) => setPeople(e.target.value)}
                     />
 
-              <select className='inputSide' id="side">
+              <select className='inputSide' id="side"
+              value={side} onChange={(e) => setSide(e.target.value)}>
                 <option value=''>Please your side</option>
-                <option value='13:00'>Indoor</option>
-                <option value='14:00'>Patio</option>
+                <option value='Indoor'>Indoor</option>
+                <option value='Patio'>Patio</option>
                 </select>
             </div>
 
