@@ -467,20 +467,6 @@ body{
 
 }
 
-/* .uno{
-  display: flex;
-  flex-direction: column;
-}
-
-.dos{
-  display: flex;
-  flex-direction: column;
-}
-
-.tres{
-  display: flex;
-  flex-direction: column;
-} */
 
 footer {
   display: flex;
@@ -839,4 +825,7 @@ footer {
   font-size: 900;
 }
 
+span{
+  color: #694900;
+}
 

@@ -1,32 +1,27 @@
+import React, { useState } from 'react';
 import './App.css';
-import Footer from './components/Footer';
-import Formulario from './components/Formulario';
-import Header from './components/Header';
-import Hero2 from './components/Hero2';
-import Main from './components/Main';
-import Nav from './components/Nav';
-import Success from './components/Success';
-import { useState } from 'react';
-
+import Page1 from './components/Page1';
+import Page2 from './components/Page2';
 
 function App() {
-  const [ customer, setCustomer ] = useState([])
+  const [showPage1, setShowPage1] = useState(true);
+
+  const handleReserveTableClick = () => {
+    setShowPage1(false);
+  };
+
+  const handleGoBackToPage1 = () => {
+    setShowPage1(true);
+  };
+
   return (
-    <>
     <div className="App">
-      <div className='header'>
-      <Header/>
-      <Nav/>
-      </div>
-      {/* <Main/> */}
-      <Hero2/>
-      <Formulario
-      customer={customer}
-      setCustomer={setCustomer}/>
-      {/* <Success/> */}
-      <Footer/>
+      {showPage1 ? (
+        <Page1 onReserveTableClick={handleReserveTableClick} />
+      ) : (
+        <Page2 onGoBackToPage1={handleGoBackToPage1} />
+      )}
     </div>
-    </>
   );
 }
 

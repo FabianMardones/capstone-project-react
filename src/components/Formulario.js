@@ -1,51 +1,57 @@
-import React from 'react'
-import { useState } from 'react'
-import Error from './Error'
+import React, { useState } from 'react';
+import Error from './Error';
 
-const Formulario = ({customer, setCustomer}) => {
-  const [ name, setName ] = useState('')
-  const [ email, setEmail ] = useState('')
-  const [ phone, setPhone ] = useState('')
-  const [ occasion, setOccasion ] = useState('')
-  const [ day, setDay ] = useState('')
-  const [ hour, setHour ] = useState('')
-  const [ people, setPeople ] = useState('')
-  const [ side, setSide] = useState('')
-  const [ error, setError ] = useState(false)
+const Formulario = ({handleFormSubmit}) => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [occasion, setOccasion] = useState('');
+  const [day, setDay] = useState('');
+  const [hour, setHour] = useState('');
+  const [people, setPeople] = useState('');
+  const [side, setSide] = useState('');
+  const [error, setError] = useState(false);
+
+  const generarId = () => {
+    const random = Math.random().toString(36).substr(2);
+    const datee = Date.now().toString(36);
+    return random + datee;
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-      if([name, email, phone, occasion, day, hour, people, side].includes('')){
-          setError(true)
-          return;
-      }
-      setError(false)
+    if ([name, email, phone, occasion, day, hour, people, side].includes('')) {
+      setError(true);
+      return;
+    }
 
+    setError(false);
 
-      const objCustomer = {
-        name,
-        email,
-        phone,
-        occasion,
-        day,
-        hour,
-        people,
-        side
-      }
+    const objCustomer = {
+      name,
+      email,
+      phone,
+      occasion,
+      day,
+      hour,
+      people,
+      side,
+      id: generarId(),
+    };
 
-      setCustomer([...customer, objCustomer])
+    // Instead of updating the state directly, call the onFormSubmit function
+    handleFormSubmit(objCustomer);
 
-      setName('')
-      setEmail('')
-      setPhone('')
-      setOccasion('')
-      setDay('')
-      setHour('')
-      setPeople('')
-      setSide('')
-
-  }
+//     setName('');
+//     setEmail('');
+//     setPhone('');
+//     setOccasion('');
+//     setDay('');
+//     setHour('');
+//     setPeople('');
+//     setSide('');
+  };
 
   return (
     <>

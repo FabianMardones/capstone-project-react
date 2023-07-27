@@ -3,8 +3,8 @@ import React from 'react'
 const Nav = () => {
   return (
     <>
-      <div class="nav-bg ">
-        <nav class="nav-principal container">
+      <div className="nav-bg ">
+        <nav className="nav-principal container">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Menu</a>

@@ -6,18 +6,18 @@ const Footer = () => {
   return (
     <>
 <footer>
-        <div class="copy-right">
+        <div className="copy-right">
             <h4>Copyright. All rights reserved</h4>
         </div>
 
 
-        <div class="logo logo-footer active">
+        <div className="logo logo-footer active">
             <img src={imgFooter2}/>
         </div>
 
 
 
-        <nav class="nav-footer">
+        <nav className="nav-footer">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Menu</a>
@@ -26,18 +26,18 @@ const Footer = () => {
         </nav>
 
 
-        <div class="newsletter">
+        <div className="newsletter">
             <h3>Suscibe to our newsletter 15% OFF</h3>
 
 
             <form action="POST" class="form-footer">
                 <label for="email-newsletter">Email</label>
-                <input type="email" name="email-newsletter" id="email-newsletter" required placeholder="email"/>
-                <button class="last-button" type="submit">Send</button>
+                <input type="email" name="email-newsletter" id="email-newsletter" placeholder="email"/>
+                <button className="last-button" type="submit">Send</button>
             </form>
 
 
-            <div class="copy-right2">
+            <div className="copy-right2">
                 <h4>Copyright. All rights reserved</h4>
             </div>
         </div>

@@ -14,7 +14,7 @@ const CardDishes = () => {
             <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
             <div className='orderADelivery'>
                 <h4>Order a delivery</h4>
-            <img src={bici}/>
+            <img src={bici} alt='image'/>
         </div>
     </div>
     </div>
