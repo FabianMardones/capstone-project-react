@@ -6,7 +6,7 @@ import Header from './Header';
 import Nav from './Nav';
 import Footer from './Footer';
 
-const Page2 = ({ onGoBackToPage1 }) => {
+const BookingPage = ({ onGoBackToPage1 }) => {
   const [customer, setCustomer] = useState([]);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -31,14 +31,9 @@ const Page2 = ({ onGoBackToPage1 }) => {
       ) : (
         <Success customer={customer} onGoBackToPage1={onGoBackToPage1} />
       )}
-      {/* Mostrar el botón "Finish" solo cuando se haya enviado el formulario */}
-      {formSubmitted && (
-        <div className='formName'>
-        </div>
-      )}
       <Footer />
     </div>
   );
 };
 
-export default Page2;
+export default BookingPage;

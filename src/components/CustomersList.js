@@ -2,11 +2,7 @@ import React from 'react'
 
 const CustomersList = ({customer, onGoBackToPage1}) => {
 
-    const handleFinishButtonClick = () => {
-        onGoBackToPage1(); // Llamamos a la función pasada desde Success para volver a Page1
-      };
     
-
     const { name, email, phone, occasion, day, hour, people, side } = customer 
 
   return (
@@ -55,7 +51,7 @@ const CustomersList = ({customer, onGoBackToPage1}) => {
                 type='Submit' 
                   className='btnMessage btnForm btn1' 
                   value='Finish'
-                  onClick={handleFinishButtonClick}
+                  onClick={onGoBackToPage1}
                   />
             </div>
         </div> 

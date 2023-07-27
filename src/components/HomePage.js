@@ -7,7 +7,7 @@ import Header from './Header';
 import Nav from './Nav';
 import Footer from './Footer';
 
-const Page1 = ({ onReserveTableClick }) => {
+const HomePage = ({ onReserveTableClick }) => {
   return (
     <div>
       <div className='header'>
@@ -22,5 +22,5 @@ const Page1 = ({ onReserveTableClick }) => {
   );
 };
 
-export default Page1;
+export default HomePage;
 

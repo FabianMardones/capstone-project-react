@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import Page1 from './components/Page1';
-import Page2 from './components/Page2';
+import HomePage from './components/HomePage';
+import BookingPage from './components/BookingPage';
 
 function App() {
   const [showPage1, setShowPage1] = useState(true);
@@ -17,9 +17,9 @@ function App() {
   return (
     <div className="App">
       {showPage1 ? (
-        <Page1 onReserveTableClick={handleReserveTableClick} />
+        <HomePage onReserveTableClick={handleReserveTableClick} />
       ) : (
-        <Page2 onGoBackToPage1={handleGoBackToPage1} />
+        <BookingPage onGoBackToPage1={handleGoBackToPage1} />
       )}
     </div>
   );
