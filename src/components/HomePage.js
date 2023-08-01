@@ -1,26 +1,23 @@
-import React from 'react';
-import imgHero from '../../src/img/icons_assets/restauranfood.jpg';
-import Specials from './Specials';
-import Section from './Section';
-import HeroHome from './HeroHome';
-import Header from './Header';
-import Nav from './Nav';
-import Footer from './Footer';
+import React from 'react'
+import Header from './Header'
+import Nav from './Nav'
+import Main from './Main'
+import HeroHome from './HeroHome'
+import Specials from './Specials'
+import Footer from './Footer'
 
-const HomePage = ({ onReserveTableClick }) => {
+
+const HomePage = ({goToForm}) => {
   return (
     <div>
       <div className='header'>
-        <Header />
-        <Nav />
+      <Header/>
+      <Nav/>
       </div>
-      <HeroHome onReserveTableClick={onReserveTableClick} />
-      <Specials />
-      <Section />
-      <Footer />
+      <Main goToForm={goToForm}/>
+      <Footer/>
     </div>
-  );
-};
+  )
+}
 
-export default HomePage;
-
+export default HomePage

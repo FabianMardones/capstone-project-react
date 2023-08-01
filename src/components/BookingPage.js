@@ -1,39 +1,61 @@
-import React, { useState } from 'react';
-import Hero2 from './Hero2';
-import Formulario from './Formulario';
-import Success from './Success';
-import Header from './Header';
-import Nav from './Nav';
-import Footer from './Footer';
+import { useState, useEffect} from 'react'
+import React from 'react'
+import Header from './Header'
+import Nav from './Nav'
+import Hero2 from './Hero2'
+import BookingForm from './BookingForm'
+import Footer from './Footer'
+import ConfirmBook from './ConfirmBook'
 
-const BookingPage = ({ onGoBackToPage1 }) => {
-  const [customer, setCustomer] = useState([]);
-  const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleFormSubmit = (formData) => {
-    setCustomer([...customer, formData]);
-    setFormSubmitted(true);
-  };
+const BookingPage = ({goToHomePage}) => {
+    const [ goToPage , setGoToPage ] = useState(false)
+    const [ customer, setCustomer ] = useState(JSON.parse(localStorage.getItem('customer')) ?? [])
+    const [ customerR, setCustomerR ] = useState({})
+    const [ availableTimes, setAvailableTimes ] = useState([])
+
+
+    useEffect(() => {
+        localStorage.setItem('customer', JSON.stringify( customer ))
+    }, [customer])
+
+
+  const deleteCustomer =  (id) => {
+    const customerUpdate = customer.filter(customerR => customerR.id !== id)
+    setCustomer(customerUpdate)
+  }
+
+  const clickPage = (formData) => {
+    setCustomer([...customer, formData])
+    setGoToPage(true)
+  }
 
   return (
+    <> 
     <div>
       <div className='header'>
-        <Header />
-        <Nav />
+      <Header/>
+      <Nav/>
       </div>
-      <Hero2 />
-      {!formSubmitted ? (
-        <Formulario
-          customer={customer}
-          setCustomer={setCustomer}
-          handleFormSubmit={handleFormSubmit}
+      <Hero2/>
+      <BookingForm
+        customer={customer}
+        setCustomer={setCustomer}
+        customerR={customerR}
+        setCustomerR={setCustomerR}
+        availableTimes={availableTimes}
+        setAvailableTimes={setAvailableTimes}
         />
-      ) : (
-        <Success customer={customer} onGoBackToPage1={onGoBackToPage1} />
-      )}
-      <Footer />
+      <ConfirmBook
+      customer={customer}
+      setCustomerR={setCustomerR}
+      deleteCustomer={deleteCustomer}
+      goToHomePage={goToHomePage}
+      />
+      <Footer/>
     </div>
-  );
-};
+    </>
+  )
+}
 
-export default BookingPage;
+export default BookingPage
