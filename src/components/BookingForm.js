@@ -9,7 +9,6 @@ const BookingForm = ({customer, setCustomer, customerR, setCustomerR, availableT
   const [ phone, setPhone ] = useState('')
   const [ occasion, setOccasion ] = useState('')
   const [ day, setDay ] = useState('')
-  
   const [ people, setPeople ] = useState('')
   const [ side, setSide] = useState('')
   const [ error, setError ] = useState(false)
